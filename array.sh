@@ -1,15 +1,10 @@
 #!/bin/bash
-echo "Enter a number"
- read n
-count=0
-for ((i=2;i<=$n;i++))
- do
-   while [ $(($n%$i)) -eq 0 ]
-  do
- arr[$count]=$i
-n=$(($n/$i))
-count=$count+1
-   done
+total=0
+for ((i=1;i<=3;i++))
+do
+   rndNum=$((1+$RANDOM%3))
+   arr[$i]=$rndNumber
+   total=$(($total+$rndNum))
  done
-echo "The prime factors are:=" ${arr[@]}
-
+echo ${arr[@}}
+echo $total
